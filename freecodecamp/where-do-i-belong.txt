@@ -1,0 +1,20 @@
+function getIndexToIns(arr, num) {
+  let newarr = [];
+  
+  if (arr.length <= 0) {
+    newarr = [...arr, num]
+  } else {
+    for (let key in arr) {
+        if ((num !== arr[key]) && num < arr[key] && num >= arr[key-1]) {
+        newarr = [...arr.slice(0, key-1),num, ...arr.slice(key-1)].sort((a, b) => a> b ? 1:a<b?-1:0)
+        console.log(newarr)
+      } else if (newarr.length <= 0) {
+        newarr = [...arr, num]
+      }
+    }
+  }
+
+  return newarr.indexOf(num);
+}
+
+console.log(getIndexToIns([], 1));

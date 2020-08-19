@@ -1,0 +1,14 @@
+function titleCase(str) {
+  let news = str.toLowerCase()
+  news = news.split(' ')
+
+  for (let i = 0; i< news.length; i++) {
+    let e = news[i].split('')
+    e[0] = e[0].toUpperCase()
+    news[i] = e.join('')
+  }
+
+  return news.join(' ');
+}
+
+titleCase("sHoRt AnD sToUt");

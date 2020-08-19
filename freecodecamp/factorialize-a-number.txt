@@ -1,0 +1,14 @@
+function factorialize(num) {
+  let count = 1;
+  let itr = num;
+  if (num <= 0){
+    return 1;
+  }
+  do {
+    itr--
+    count *= itr+1
+  } while (itr > 1)
+  return count;
+}
+
+console.log(factorialize(5));

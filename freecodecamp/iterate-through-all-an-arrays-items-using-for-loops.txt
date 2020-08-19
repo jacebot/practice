@@ -1,0 +1,15 @@
+function filteredArray(arr, elem) {
+  let newArr = [];
+  // Only change code below this line
+  for (let i = 0; i < arr.length; i++) {
+    let e = arr.filter(item => {
+      return !item.includes(elem)
+    })
+    console.log(e)
+    newArr = [...e]
+  }
+  // Only change code above this line
+  return newArr;
+}
+
+console.log(filteredArray([ ["trumpets", 2], ["flutes", 4], ["saxophones", 2] ], 2));

@@ -1,0 +1,19 @@
+function sumAll(arr) {
+  arr.sort((a, b) => a === b ? 0:a > b ? 1:-1)
+  
+  let first = arr[0]
+  let last = arr[arr.length-1]
+  let counter = first;
+  let newArr = []
+
+  while (counter < last){
+    if(counter !== first && counter !== last && !newArr.includes(counter)) {
+      newArr.push(counter)
+    }
+    counter++
+  }
+  let arr2 = [first, ...newArr, last].reduce((a, b) => a+b, 0)
+  return arr2;
+}
+
+sumAll([5, 10]);

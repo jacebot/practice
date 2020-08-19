@@ -1,0 +1,8 @@
+function confirmEnding(str, target) {
+let s = str.lastIndexOf(target);
+let bool = str.slice(s) === target;
+
+  return bool;
+}
+
+confirmEnding("Open sesame", "pen");

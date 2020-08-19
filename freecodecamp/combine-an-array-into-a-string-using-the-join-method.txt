@@ -1,0 +1,16 @@
+function sentensify(str) {
+  // Only change code below this line
+  let r = /[.\-,]/gm
+  let words = str.split(r);
+  let newArr = words.map((i, index) => {
+    if(index !== words.length-1) {
+      return i+' '
+    } else {
+      return i
+    }
+  })
+
+  return newArr.join('')
+  // Only change code above this line
+}
+sentensify("May-the-force-be-with-you");
